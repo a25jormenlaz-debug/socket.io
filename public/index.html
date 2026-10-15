@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <title>Xat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Xat</h1>
+
+  <form id="formEntrada">
+    <label for="inputNom">Com et dius?</label>
+    <input type="text" id="inputNom" maxlength="20" autocomplete="off">
+    <button type="submit">Entrar</button>
+    <p id="errorNom"></p>
+  </form>
+
+  <div id="xat" class="hidden">
+    <header class="capcalera">
+      <h2>Xat en temps real</h2>
+      <span>Participes com a: <strong id="nomUsuari"></strong></span>
+      <span id="estat" class="estat">Connectant...</span>
+    </header>
+
+    <ul id="missatges"></ul>
+
+    <form id="formEnviar">
+      <input type="text" id="inputText" maxlength="500" autocomplete="off" placeholder="Escriu un missatge...">
+      <button type="submit" id="btnEnviar">Enviar</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>

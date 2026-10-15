@@ -1,0 +1,89 @@
+body {
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.capcalera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  background: #0d6efd;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px 8px 0 0;
+}
+
+.capcalera h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+.estat::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background: #aaa;
+}
+
+.estat.connectat::before {
+  background: #2ecc71;
+}
+
+.estat.desconnectat::before {
+  background: #e74c3c;
+}
+
+
+#missatges {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  height: 350px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #f8f9fa;
+}
+
+.missatge {
+  margin-bottom: 10px;
+}
+
+.emissor {
+  font-weight: bold;
+}
+
+.hora {
+  color: #888;
+  font-size: 0.8rem;
+  margin-left: 6px;
+}
+
+.text {
+  overflow-wrap: anywhere;
+}
+
+
+#formEnviar {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#inputText {
+  flex: 1;
+  padding: 8px;
+}
